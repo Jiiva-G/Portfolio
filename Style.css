@@ -112,114 +112,26 @@ header.hero {
 }
 
 
+/* Skills Section */
 .skills-container {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   padding: 20px;
   gap: 15px;
-  opacity: 0;  /* Initially hidden */
-  transform: translateX(-100%);  /* Start from the left */
-  transition: all 0.8s ease-out;  /* Smooth transition */
-}
-
-/* Individual Skill Box */
-/* Add Jump Animation */
-@keyframes jump {
-  0% {
-      transform: translateY(20px);
-      opacity: 0;
-  }
-  50% {
-      transform: translateY(-10px);
-      opacity: 1;
-  }
-  100% {
-      transform: translateY(0);
-      opacity: 1;
-  }
 }
 
 .skill {
   background: #00b4d8;
-  padding: 10px;
-  border-radius: 50%;
+  padding: 20px;
+  border-radius: 5px;
   text-align: center;
   color: white;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s, box-shadow 0.3s, background 0.3s ease;
-  width: 100px;
-  height: 100px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  opacity: 0;  /* Initially hidden */
-  animation: jump 0.6s forwards;  /* Animation when added */
-  animation-delay: 0.3s;  /* Delay for the animation */
 }
 
-/* Delay the animation for each skill */
-.skill:nth-child(1) {
-  animation-delay: 0.2s;
-}
-.skill:nth-child(2) {
-  animation-delay: 0.4s;
-}
-.skill:nth-child(3) {
-  animation-delay: 0.6s;
-}
-.skill:nth-child(4) {
-  animation-delay: 0.8s;
-}
-.skill:nth-child(5) {
-  animation-delay: 1s;
-}
-.skill:nth-child(6) {
-  animation-delay: 1.2s;
-}
-
-/* Hover effect */
-.skill:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-}
-
-.skill i {
-  font-size: 1em;  /* Larger icons */
-  margin-bottom: 15px;
-}
-
-/* Skills Heading */
-.skills h2 {
+.skills h2{
   text-align: center;
   padding: 50px 20px;
-  font-size: 2.5em;
-  color: #023e8a;  /* Color for heading */
-}
-
-/* Visible Class - to trigger the slide-in animation */
-.skills-container.visible {
-  opacity: 1;
-  transform: translateX(0);  /* Move to the center */
-}
-
-/* Fade-in animation for skills */
-@keyframes slideIn {
-  from {
-      opacity: 0;
-      transform: translateX(-100%);
-  }
-  to {
-      opacity: 1;
-      transform: translateX(0);
-  }
-}
-
-/* Make the skill visible when the class is added */
-.skill.visible {
-  opacity: 1;  /* Make the element visible */
-  transform: translateY(0);  /* Ensure it finishes at the normal position */
-  transition: opacity 0.6s, transform 0.6s ease;
 }
 
 /* Projects Section */
@@ -418,102 +330,5 @@ header.hero {
 footer p {
   margin: 0;
   font-size: 0.9em;
-}
-
-/* Add Animation */
-section {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: all 0.6s ease-out;
-}
-
-section.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* Navbar Toggle for Mobile */
-.menu-toggle {
-  display: none;
-  cursor: pointer;
-}
-
-.menu-toggle i {
-  font-size: 24px;
-  color: #fff;
-}
-
-@media screen and (max-width: 768px) {
-  .menu-toggle {
-    display: block;
-    padding: 0 10px;
-  }
-
-  .navbar ul {
-    display: none;
-    flex-direction: column;
-    background: #023e8a;
-    position: absolute;
-    top: 50px;
-    width: 100%;
-    left: 0;
-    text-align: center;
-    z-index: 10;
-  }
-
-  .navbar ul.active {
-    display: flex;
-  }
-
-  .navbar li {
-    margin: 10px 0;
-  }
-}
-
-
-/* Glow Effect for Inputs */
-#contactForm input:focus, #contactForm textarea:focus {
-  border: 2px solid #00b4d8;
-  box-shadow: 0 0 15px rgba(0, 180, 216, 0.7);
-  outline: none;
-}
-
-/* Validation Styles */
-#contactForm input, #contactForm textarea {
-  border: 2px solid #ddd;
-  transition: border-color 0.3s ease, box-shadow 0.3s ease;
-}
-
-#contactForm input:invalid, #contactForm textarea:invalid {
-  border-color: red;
-}
-
-/* Success Message */
-#successMessage {
-  font-size: 1.2em;
-  font-weight: bold;
-  margin-top: 10px;
-  text-align: center;
-  display: none;
-  animation: fadeIn 1s ease;
-}
-
-/* Fade Animations */
-@keyframes fadeIn {
-  from {
-      opacity: 0;
-  }
-  to {
-      opacity: 1;
-  }
-}
-
-@keyframes fadeOut {
-  from {
-      opacity: 1;
-  }
-  to {
-      opacity: 0;
-  }
 }
 
